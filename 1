@@ -1,0 +1,30 @@
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {addNavigationHelpers} from 'react-navigation';
+import AppNavigator from './src/navigation';
+
+const store = createStore(reducers);
+
+class App extends Component {
+  render() {
+    const {dispatch, nav} = this.props;
+
+
+    return (
+      <Provider store={store}>
+        <AppNavigator
+          navigation={addNavigationHelpers({
+            dispatch,
+            state: nav,
+          })}
+        />
+      </Provider>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  nav: state.nav,
+});
+
+export default connect(mapStateToProps)(App);
