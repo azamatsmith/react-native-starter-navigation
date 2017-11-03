@@ -1,8 +1,8 @@
 import {StackNavigator} from 'react-navigation';
 import LandingScreen from '../LandingScreen';
-// import Drawer from '../components/drawer';
+import DrawerNav from './DrawerNav';
 
 export default StackNavigator({
   LandingScreen: {screen: LandingScreen},
-  // Drawer: { screen: Drawer },
+  Drawer: {screen: DrawerNav},
 });

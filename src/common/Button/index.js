@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     borderRadius: 3,
     justifyContent: 'center',
     marginHorizontal: 20,
+    marginVertical: 20,
     paddingHorizontal: 20,
     paddingVertical: 10,
   },
